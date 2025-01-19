@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #002b36; /* Colore di sfondo scuro */
+        }
+        .register-container {
+            max-width: 400px;
+            margin: auto;
+            padding: 2rem;
+            background-color: #004152; /* Colore di sfondo chiaro per il modulo */
+            border-radius: 0.5rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="register-container">
+    <h2 class="text-center">Registrati</h2>
+    <form action="/register" method="post">
+        <div class="mb-3">
+            <label for="firstName" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" required>
+        </div>
+        <div class="mb-3">
+            <label for="lastName" class="form-label">Cognome</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" required>
+        </div>
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" name="username" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+        <div class="mb-3">
+            <label for="confirmPassword" class="form-label">Conferma Password</label>
+            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success w-100">Conferma</button>
+        <button type="button" class="btn btn-warning w-100 mt-2" onclick="redirectToLogin()">Indietro</button>
+    </form>
+</div>
+
+<script>
+    function redirectToLogin() {
+        window.location.href = "/login";
+    }
+</script>
+
+</body>
+</html>
