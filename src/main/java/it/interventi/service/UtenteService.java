@@ -35,7 +35,15 @@ public class UtenteService {
                 .map(utenteMapper::toDto);
     }
 
+    public boolean autenticazione (String username, String password) {
+        return this.findByUsername(username)
+                .map(utente -> this.verificaPassword(password, utente.getPassword()))
+                .orElse(false);
+    }
+
     public boolean verificaPassword (String manualPassword, String cryptPassword) {
         return passwordEncoder.matches(manualPassword, cryptPassword);
     }
+
+
 }
