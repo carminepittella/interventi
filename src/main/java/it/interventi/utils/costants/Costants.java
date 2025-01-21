@@ -12,6 +12,7 @@ public class Costants {
         public static final String REGISTER_FAILED_MEX = "Registrazione fallita!\nQualcosa è andato storto, riprovare";
     }
 
+
     /**
      * @Pages
      */
