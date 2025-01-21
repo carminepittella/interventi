@@ -21,6 +21,7 @@ public class AziendaController {
     @GetMapping("")
     private List<AziendaDto> getAllAziende () {
         return aziendaService.findAllAziende();
+
     }
 
 }
