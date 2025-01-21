@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Interventi - login</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <style>
         body {
             background-color: #002b36; /* Colore di sfondo scuro */
@@ -28,7 +28,7 @@
 
 <div class="login-container">
     <h2 class="text-center">Accedi</h2>
-    <form action="/login" method="post">
+    <form action="/auth/login" method="post">
         <div class="mb-3">
             <label for="username" class="form-label">Username</label>
             <input type="text" class="form-control" id="username" name="username" required>
@@ -46,7 +46,7 @@
 
 <script>
     function redirectToRegister() {
-        window.location.href = "/register";
+        window.location.href = "/auth/register";
     }
 </script>
 
