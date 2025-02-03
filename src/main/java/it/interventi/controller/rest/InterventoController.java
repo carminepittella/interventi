@@ -1,7 +1,7 @@
-package it.interventi.controller;
+package it.interventi.controller.rest;
 
-import it.interventi.dto.MedicoDto;
-import it.interventi.service.MedicoService;
+import it.interventi.dto.InterventoDto;
+import it.interventi.service.InterventoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,16 +10,16 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("medico")
+@RequestMapping("/api/interventi")
 @RequiredArgsConstructor
-public class MedicoController {
+public class InterventoController {
 
-    private final MedicoService medicoService;
+    private final InterventoService interventoService;
 
     /**************************** GET ****************************/
 
     @GetMapping("")
-    private List<MedicoDto> getAllMedici() {
-        return medicoService.findAllMedici();
+    private List<InterventoDto> getAllInterventi() {
+        return interventoService.findAllInterventi();
     }
 }

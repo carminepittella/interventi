@@ -1,7 +1,7 @@
-package it.interventi.controller;
+package it.interventi.controller.rest;
 
-import it.interventi.dto.AziendaDto;
-import it.interventi.service.AziendaService;
+import it.interventi.dto.StrutturaDto;
+import it.interventi.service.StrutturaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,18 +10,16 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("azienda")
+@RequestMapping("/api/strutture")
 @RequiredArgsConstructor
-public class AziendaController {
+public class StrutturaController {
 
-    private final AziendaService aziendaService;
+    private final StrutturaService strutturaService;
 
     /**************************** GET ****************************/
 
     @GetMapping("")
-    private List<AziendaDto> getAllAziende () {
-        return aziendaService.findAllAziende();
-
+    private List<StrutturaDto> getAllStrutture() {
+        return strutturaService.findAllStrutture();
     }
-
 }

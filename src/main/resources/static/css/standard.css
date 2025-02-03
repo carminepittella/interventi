@@ -1,0 +1,57 @@
+body {
+    background-color: #002b36; /* Colore di sfondo scuro */
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Imposta l'altezza della pagina */
+    margin: 0; /* Rimuovi margini */
+}
+
+.filter-section {
+    background-color: #004152; /* Colore di sfondo per la sezione filtri */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.table-container {
+    flex: 1; /* Permette alla tabella di occupare lo spazio rimanente */
+    max-width: 85%; /* Larghezza massima della tabella */
+    margin: auto; /* Centra la tabella */
+    overflow-y: auto; /* Abilita lo scorrimento verticale */
+    max-height: calc(100vh - 260px); /* Altezza massima dinamica in base all'altezza dello schermo meno spazio per filtri e pulsanti */
+    border: 1px solid #ffffff; /* Bordo per evidenziare la tabella */
+    background-color: #003340; /* Sfondo scuro per la tabella */
+    border-radius: 0.5rem;
+}
+
+.table {
+    margin: 0; /* Rimuovi margine predefinito */
+    width: 100%; /* Assicurati che la tabella occupi tutto lo spazio disponibile */
+    text-align: center; /* Centra il contenuto */
+}
+
+.table thead th {
+    position: sticky; /* Fissa la riga dell'intestazione */
+    top: 0; /* Mantieni l'intestazione in alto */
+    z-index: 2; /* Assicurati che sia sopra le altre righe */
+    background-color: #004152; /* Colore di sfondo per l'intestazione */
+    color: white; /* Colore del testo */
+}
+
+.table tfoot {
+    position: sticky; /* Mantieni il footer fisso all'interno della tabella */
+    bottom: 0; /* Aggancialo in basso */
+    background-color: #004152; /* Colore di sfondo per il footer */
+    font-weight: bold; /* Enfatizza il testo */
+    z-index: 1; /* Assicurati che sia sopra le righe di dati */
+}
+
+.button-section {
+    background-color: #004152; /* Colore di sfondo per la sezione pulsanti */
+    padding: 1rem;
+    text-align: center; /* Centra i pulsanti */
+    position: fixed; /* Rendi la sezione fissa */
+    bottom: 0; /* Posiziona la sezione in fondo */
+    width: 100%; /* Assicurati che occupi tutta la larghezza */
+    z-index: 1000; /* Assicurati che sia sopra gli altri elementi */
+}
