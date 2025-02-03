@@ -5,12 +5,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/medici")
-public class MedicoControllerView {
+@RequestMapping("/interventi")
+public class InterventoControllerView {
 
-    // Endpoint che ritorna una vista HTML
     @GetMapping
     public String getHomePage () {
-        return "medici"; // Cerca medici.html in templates/
+        return "interventi";
     }
+
+
 }

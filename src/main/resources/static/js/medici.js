@@ -14,7 +14,7 @@ function populateTable(data) {
     });
 
     // Aggiorna il totale
-    document.getElementById('total-elements').textContent = `Totale medici: ${data.length}`;
+    document.getElementById('total-elements').textContent = `Totale: ${data.length}`;
 }
 
 // Funzione per caricare i dati

@@ -15,11 +15,11 @@ body {
 
 .table-container {
     flex: 1; /* Permette alla tabella di occupare lo spazio rimanente */
-    max-width: 85%; /* Larghezza massima della tabella */
+    max-width: 100%; /* Larghezza massima della tabella */
     margin: auto; /* Centra la tabella */
     overflow-y: auto; /* Abilita lo scorrimento verticale */
     max-height: calc(100vh - 260px); /* Altezza massima dinamica in base all'altezza dello schermo meno spazio per filtri e pulsanti */
-    border: 1px solid #ffffff; /* Bordo per evidenziare la tabella */
+    border: 1px solid #72baac; /* Bordo per evidenziare la tabella */
     background-color: #003340; /* Sfondo scuro per la tabella */
     border-radius: 0.5rem;
 }

@@ -19,7 +19,7 @@ public class MedicoService {
     private final MedicoRepository medicoRepository;
     private final MedicoMapper medicoMapper;
 
-    /*************************** FIND ***************************/
+    /*----------------------------- FIND -----------------------------*/
 
     public List<MedicoDto> findAllMedici () {
         return medicoMapper.toDtoList(medicoRepository.findAll());
@@ -29,6 +29,8 @@ public class MedicoService {
         if (Objects.isNull(id)) return null;
         return medicoMapper.toDto(medicoRepository.findById(id).orElse(null));
     }
+
+    /*----------------------------- CRUD -----------------------------*/
 
     public MedicoDto saveMedico (MedicoDto medicoDto) {
         if (Objects.isNull(medicoDto)) return null;
