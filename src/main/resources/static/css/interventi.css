@@ -1,13 +1,12 @@
-/* Versione con CSS puro */
-table.table td:nth-child(1),
-table.table th:nth-child(1) {
-    white-space: nowrap;
-    width: 1%;
-}
-
-/* OPPURE versione con classi Bootstrap */
+/* La colonna della data non viene spezzata (rimane tutto su una riga) */
 .no-wrap-column {
     white-space: nowrap;
     width: 1%;
     min-width: 120px;
+}
+
+/* Cambia colore della riga al passaggio del cursore e rende il cursore un puntatore */
+#interventi-table.table tbody tr:hover {
+    background-color: #284c56;
+    cursor: pointer;
 }

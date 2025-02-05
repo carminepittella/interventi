@@ -13,6 +13,22 @@ function populateTable(data) {
                 <td>${intervento.azienda.nomeAzienda}</td>
                 <td>${intervento.specialist.specialista}</td>
             `;
+        // All'interno del forEach, dopo row.innerHTML
+        row.setAttribute('role', 'button');
+        row.setAttribute('tabindex', '0');
+
+        // Gestione tastiera
+        row.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                window.location.href = `/interventi/${intervento.idIntervento}`;
+            }
+        });
+        // Aggiungi l'event listener subito dopo aver creato la riga
+        row.addEventListener('click', () => {
+            if(intervento.idIntervento) {
+                window.location.href = `/interventi/${intervento.idIntervento}`;
+            }
+        });
         tbody.appendChild(row);
     });
     // Aggiorna il totale
